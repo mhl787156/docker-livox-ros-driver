@@ -2,6 +2,8 @@ services:
   livox: 
     image: livox-ros-driver
     network_mode: host
+    pid: host
+    ipc: host
     volumes: 
       - type: bind
         source: ./config
