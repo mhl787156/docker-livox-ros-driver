@@ -20,7 +20,8 @@ WORKDIR /ros_ws/src/Livox-SDK2
 RUN mkdir build \
     && cd build \
     && cmake .. && make -j \
-    && make install 
+    && make install \
+    && touch COLCON_IGNORE
 
 WORKDIR /ros_ws/src/livox_ros_driver2
 RUN . /opt/ros/humble/setup.sh \
