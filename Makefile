@@ -1,7 +1,7 @@
 SHELL := /bin/bash
 HOST_UID := $(shell id -u)
 
-CONTAINER_NAME:=livox-ros-driver
+CONTAINER_NAME:=livox-ros-driver-2
 
 # make run
 # Run this command to build the container

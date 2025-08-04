@@ -9,7 +9,7 @@ usage() {
 
 # Initialize variables with default values
 init="false"
-name="livox-ros-driver2"
+name="livox-ros-driver-2"
 registry="128.16.29.85:5000"
 
 # Arg parser
