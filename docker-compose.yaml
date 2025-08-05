@@ -1,11 +1,14 @@
 services:
   livox: 
-    image: livox-ros-driver
+    image: livox-ros-driver-2
     network_mode: host
     pid: host
     ipc: host
     volumes: 
       - type: bind
-        source: ./config
-        target: /ros2/install/livox_ros_driver2/share/livox_ros_driver2/config/
+        source: ./config/MID360_config.json
+        target: /ros_ws/src/livox_ros_driver2/config/MID360_config.json
+      - type: bind
+        source: ./config/msg_MID360_launch.py
+        target: /ros_ws/src/livox_ros_driver2/launch_ROS2/msg_MID360_launch.py
     command: ["ros2", "launch", "livox_ros_driver2", "msg_MID360_launch.py"]
